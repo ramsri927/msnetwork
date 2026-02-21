@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MS Network – Ultimate Broadband & IPTV</title>
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:linear-gradient(135deg,#1d2671,#c33764);
+  color:#fff;
+  overflow-x:hidden;
+}
+
+header{
+  text-align:center;
+  padding:80px 20px;
+}
+
+/* 3D Animated Logo */
+.logo3d{
+  font-size:70px;
+  font-weight:900;
+  letter-spacing:5px;
+  color:#ff6ec4;
+  text-shadow:0 0 15px #7873f5,0 0 30px #42e695;
+  animation: float 3s ease-in-out infinite alternate, glow 2.5s infinite alternate;
+}
+
+@keyframes float{
+  from{transform:translateY(0px) rotateX(0deg) rotateY(0deg);} 
+  to{transform:translateY(-12px) rotateX(12deg) rotateY(8deg);} 
+}
+
+/* Mobile friendly glow animation */
+@keyframes glow{
+  0%{text-shadow:0 0 10px #ff6ec4,0 0 20px #7873f5;}
+  100%{text-shadow:0 0 25px #42e695,0 0 40px #3bb2b8;}
+} 
+  to{transform:translateY(-15px) rotateX(10deg);} 
+}
+
+.subtitle{
+  margin-top:15px;
+  font-size:18px;
+  opacity:0.8;
+}
+
+section{
+  padding:60px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+}
+
+.card{
+  background:linear-gradient(160deg,rgba(255,255,255,0.12),rgba(255,255,255,0.02));
+  backdrop-filter:blur(10px);
+  border-radius:20px;
+  padding:28px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.4s;
+  box-shadow:0 8px 20px rgba(0,0,0,0.4);
+  transform-style:preserve-3d;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+  box-shadow:0 12px 30px rgba(255,110,196,0.6);
+}
+
+.card h3{
+  color:#00e5ff;
+}
+
+.hidden-content{
+  display:none;
+  margin-top:15px;
+  font-size:15px;
+  color:#ccc;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:15px;
+  padding:10px 20px;
+  background:#00e5ff;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  padding:20px;
+  background:#000;
+  margin-top:50px;
+  font-size:14px;
+}
+
+/* Mobile View Optimization */
+@media(max-width:768px){
+  header{padding:50px 15px;}
+  .logo3d{font-size:44px;letter-spacing:3px;}
+  .subtitle{font-size:15px;}
+  section{padding:40px 15px;}
+  .cards{gap:20px;}
+  .card{padding:22px;}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo3d">MS NETWORK</div>
+  <div class="subtitle">Broadband • IPTV • OTT • 24×7 Service – Rajapalayam</div>
+</header>
+
+<section>
+  <h2 style="text-align:center;color:#00e5ff">Our Premium Services</h2>
+  <div class="cards">
+
+    <div class="card" onclick="toggleContent(this)">
+      <h3>High Speed Internet</h3>
+      <p>Up to 100 Mbps & Above</p>
+      <div class="hidden-content">
+        ✔ Unlimited Data Plans<br>
+        ✔ 24×7 Support<br>
+        ✔ Low Latency Gaming<br>
+        ✔ Home & Business Packages<br>
+        ₹699 onwards
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <h3>IPTV Service</h3>
+      <p>500+ Live Channels</p>
+      <div class="hidden-content">
+        ✔ Tamil, Telugu, Hindi, Malayalam<br>
+        ✔ HD & SD Channels<br>
+        ✔ Smart TV Compatible<br>
+        ✔ No Dish Required
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <h3>OTT Entertainment</h3>
+      <p>Movies & Web Series</p>
+      <div class="hidden-content">
+        ✔ Skyplay OTT Support<br>
+        ✔ Family Entertainment<br>
+        ✔ Mobile + TV Access<br>
+        ✔ Combo Plans Available
+      </div>
+    </div>
+
+    <div class="card" onclick="toggleContent(this)">
+      <h3>Combo Pack</h3>
+      <p>Internet + IPTV + OTT</p>
+      <div class="hidden-content">
+        ✔ One Monthly Payment<br>
+        ✔ Best Value Plan<br>
+        ✔ Premium Speed<br>
+        ✔ Installation Support
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section style="text-align:center">
+  <h2 style="color:#00e5ff">Contact Now</h2>
+  <p>📍 Opposite Chithira Theater, Rajapalayam</p>
+  <p>📞 63696 97478 | ✉ msnetwork30@gmail.com</p>
+  <a class="btn" href="https://wa.me/916369697478">Chat on WhatsApp</a>
+</section>
+
+<footer>
+© 2026 MS Network | All Rights Reserved
+</footer>
+
+<script>
+function toggleContent(card){
+  const content = card.querySelector('.hidden-content');
+  if(content.style.display === 'block'){
+    content.style.display = 'none';
+  } else {
+    content.style.display = 'block';
+  }
+}
+</script>
+
+</body>
+</html>
